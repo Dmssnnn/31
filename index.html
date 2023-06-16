@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ 
+    <button id="button">Click Here</button>
+
+    <script>
+// 9.  დაწერეთ ფუნქცია რომელიც არგუმენტად მიიღებს სახელს, html ში შექმნის p ტეგს და ტექსტად გადასცემს  არგუმენტად მიღებულ სახელს
+
+        const nameToHtml = (name) => {
+            const createName = document.createElement("p");
+            createName.textContent = name;
+            document.body.appendChild(createName)
+        }
+        nameToHtml("shottta")
+
+
+        // 10. დაწერეთ ფუნქცია, რომელსაც ღილაკზე კლიკის დროს გამოიძახებთ და alert ში გამოიტანთ თქვენ სახელს და გვარს
+
+        const getClicked = (click) => {
+            const button = document.getElementById("button")
+
+            button.addEventListener('click', () =>{
+                alert("hello me var dimitri");
+            })
+
+
+        }
+        getClicked(button);
+    </script>
+</body>
+</html>
